@@ -1,218 +1,213 @@
-:root {
-  --background: #011627;
-  --foreground: #d6deeb;
-  --cursor: #80a4c2;
-  --active-selection: #1d3b53;
-  --inactive-selection: #7e57c25a;
-  --search-highlight: #5f7e97;
-  --comment: #637777;
-  --constant: #ff6363;
-  --numbers: #f78c6c;
-  --keywords: #c792ea;
-  --functions: #82aaff;
-  --quoted-strings: #ecc48dff;
-  --support: #addb67;
-  --language-variables: #7fdbca;
-  --invalid-construct: #ff2c83;
-  --inverse-color-white: rgba(255, 255, 255, 0.87);
-  --text-white: var(--foreground);
-  --text-inactive-white: rgba(255, 255, 255, 0.6);
-  --background-dark: rgba(0, 0, 0, 0.87);
-  --hairline: #d6deeb30;
-}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #011627;
+    --foreground: #d6deeb;
+    --cursor: #80a4c2;
+    --active-selection: #1d3b53;
+    --inactive-selection: #7e57c25a;
+    --search-highlight: #5f7e97;
+    --comment: #637777;
+    --constant: #ff6363;
+    --numbers: #f78c6c;
+    --keywords: #c792ea;
+    --functions: #82aaff;
+    --quoted-strings: #ecc48dff;
+    --support: #addb67;
+    --language-variables: #7fdbca;
+    --invalid-construct: #ff2c83;
+    --inverse-color-white: rgba(255, 255, 255, 0.87);
+    --text-white: var(--foreground);
+    --text-inactive-white: rgba(255, 255, 255, 0.6);
+    --background-dark: rgba(0, 0, 0, 0.87);
+    --hairline: #d6deeb30;
+  }
 
-.allWrapper,
-.mainWrapper > div > div,
-section {
-  background-color: var(--background);
-  color: var(--text-white);
-}
+  .allWrapper,
+  .mainWrapper > div > div,
+  section {
+    background-color: var(--background);
+    color: var(--text-white);
+  }
 
-.mainWrapper > div[id^="ArticleEditorPage-"] > div > div:nth-child(3) *,
-.mainWrapper > div[id^="ArticleEditorPage-"] > div > div:nth-child(4) {
-  background-color: var(--background);
-  color: var(--text-white);
-}
+  .mainWrapper > div[id^="ArticleEditorPage-"] > div > div:nth-child(3) *,
+  .mainWrapper > div[id^="ArticleEditorPage-"] > div > div:nth-child(4) {
+    background-color: var(--background);
+    color: var(--text-white);
+  }
 
-.p-items_main > div:first-child,
-.p-items_main > div:nth-child(2) > div,
-.p-items_main * section,
-.p-items_main > div:first-child > div:first-child * span,
-.p-items_main > div > div > div {
-  background-color: var(--active-selection);
-  color: var(--text-white);
-}
+  .p-items_main > div:first-child,
+  .p-items_main > div:nth-child(2) > div,
+  .p-items_main * section,
+  .p-items_main > div:first-child > div:first-child * span,
+  .p-items_main > div > div > div {
+    background-color: var(--active-selection);
+    color: var(--text-white);
+  }
 
-.p-items_main > div:nth-child(2) * {
-  border-color: var(--hairline);
-}
-.p-items_main > div:nth-child(2) * textarea {
-  background-color: var(--background);
-  color: var(--text-white);
-  outline: none;
-}
+  .p-items_main > div:nth-child(2) * {
+    border-color: var(--hairline);
+  }
+  .p-items_main > div:nth-child(2) * textarea {
+    background-color: var(--background);
+    color: var(--text-white);
+    outline: none;
+  }
 
-.p-items_main > div:nth-child(2) * div,
-.p-items_main > div:nth-child(2) * button {
-  background-color: var(--active-selection);
-  color: var(--text-white);
-}
-.p-items_toc * a.focus,
-.p-items_toc * a:hover {
-  background-color: var(--comment);
-}
-blockquote *:not(code) {
-  color: var(--text-white);
-}
+  .p-items_main > div:nth-child(2) * div,
+  .p-items_main > div:nth-child(2) * button {
+    background-color: var(--active-selection);
+    color: var(--text-white);
+  }
+  .p-items_toc * a.focus,
+  .p-items_toc * a:hover {
+    background-color: var(--comment);
+  }
+  blockquote *:not(code) {
+    color: var(--text-white);
+  }
 
-.allWrapper > div > header,
-.st-NewHeader_mainNavigation,
-.st-NewHeader_dropdown.is-open {
-  background-color: var(--background-dark);
-}
-.st-NewHeader_notiIframe.is-open,
-.st-NewHeader_notiHeaderTitle > span,
-.notification {
-  background-color: var(--background-dark);
-  color: var(--text-white);
-}
+  .allWrapper > div > header,
+  .st-NewHeader_mainNavigation,
+  .st-NewHeader_dropdown.is-open {
+    background-color: var(--background-dark);
+  }
+  .st-NewHeader_notiIframe.is-open,
+  .st-NewHeader_notiHeaderTitle > span,
+  .notification {
+    background-color: var(--background-dark);
+    color: var(--text-white);
+  }
 
-a.st-NewHeader_dropdownItem:hover {
-  background-color: var(--cursor);
-}
-div.st-NewHeader_dropdownItem {
-  color: var(--text-white);
-}
-hr.st-NewHeader_dropdownDivider {
-  background-color: var(--hairline);
-}
+  a.st-NewHeader_dropdownItem:hover {
+    background-color: var(--cursor);
+  }
+  div.st-NewHeader_dropdownItem {
+    color: var(--text-white);
+  }
+  hr.st-NewHeader_dropdownDivider {
+    background-color: var(--hairline);
+  }
 
-a,
-p,
-time,
-ol > li * span,
-span.material-symbols-outlined,
-#logly-lift-widget * span,
-.logly-lift-ad * span,
-button,
-h1 {
-  color: var(--text-white);
-}
+  a,
+  p,
+  time,
+  ol > li * span,
+  span.material-symbols-outlined,
+  #logly-lift-widget * span,
+  .logly-lift-ad * span,
+  button,
+  h1 {
+    color: var(--text-white);
+  }
 
-input,
-textarea {
-  background-color: var(--active-selection);
-  color: var(--text-white);
-  outline: none;
-}
-textarea::placeholder,
-input::placeholder {
-  color: var(--text-inactive-white);
-}
+  input,
+  textarea {
+    background-color: var(--active-selection);
+    color: var(--text-white);
+    outline: none;
+  }
+  textarea::placeholder,
+  input::placeholder {
+    color: var(--text-inactive-white);
+  }
 
-button[font-size="14"] {
-  color: var(--background);
-}
-button.st-NewHeader_postButton,
-main > div > div > div,
-main > div > div > button,
-textarea {
-  background-color: var(--search-highlight);
-  border-color: var(--search-highlight);
-  color: var(--text-white);
-  outline: none;
-}
-button.st-NewHeader_notifications {
-  background-color: transparent;
-}
+  button[font-size="14"] {
+    color: var(--background);
+  }
+  button.st-NewHeader_postButton,
+  main > div > div > div,
+  main > div > div > button,
+  textarea {
+    background-color: var(--search-highlight);
+    border-color: var(--search-highlight);
+    color: var(--text-white);
+    outline: none;
+  }
+  button.st-NewHeader_notifications {
+    background-color: transparent;
+  }
 
-span[aria-label="1"] {
-  color: rgb(255, 196, 0);
-}
-span[aria-label="2"] {
-  color: rgb(201, 201, 201);
-}
-span[aria-label="3"] {
-  color: rgb(172, 109, 77);
-}
+  span[aria-label="1"] {
+    color: rgb(255, 196, 0);
+  }
+  span[aria-label="2"] {
+    color: rgb(201, 201, 201);
+  }
+  span[aria-label="3"] {
+    color: rgb(172, 109, 77);
+  }
 
-article {
-  background-color: var(--active-selection);
-}
-article > a {
-  background-color: transparent;
-  border-radius: 10px;
-}
+  article {
+    background-color: var(--active-selection);
+  }
+  article > a {
+    background-color: transparent;
+    border-radius: 10px;
+  }
 
-article > footer * span {
-  color: var(--text-white);
-}
-article > footer * svg {
-  fill: var(--text-inactive-white);
-}
+  article > footer * span {
+    color: var(--text-white);
+  }
+  article > footer * svg {
+    fill: var(--text-inactive-white);
+  }
 
-code {
-  background-color: var(--cursor);
-}
+  code {
+    background-color: var(--cursor);
+  }
 
-div.code-frame,
-div.code-frame * {
-  background-color: var(--background);
-}
+  div.code-frame,
+  div.code-frame * {
+    background-color: var(--background);
+  }
 
-div.note.warn {
-  background-color: var(--invalid-construct);
-}
-div.note.warn > span {
-  color: var(--text-white);
-}
+  div.note.warn {
+    background-color: var(--invalid-construct);
+  }
+  div.note.warn > span {
+    color: var(--text-white);
+  }
 
-div.note.info {
-  background-color: var(--inactive-selection);
-}
+  div.note.info {
+    background-color: var(--inactive-selection);
+  }
 
-div[id^="UserMainPage-"] * {
-  border-color: var(--hairline);
-}
-div[id^="UserMainPage-"] > div > div > div:first-child {
-  background-color: var(--active-selection);
-}
-div[id^="UserMainPage-"] * a {
-  background: transparent;
-}
-div[id^="UserMainPage-"] * a > span {
-  color: var(--text-white);
-}
+  div[id^="UserMainPage-"] * {
+    border-color: var(--hairline);
+  }
+  div[id^="UserMainPage-"] > div > div > div:first-child {
+    background-color: var(--active-selection);
+  }
+  div[id^="UserMainPage-"] * a {
+    background: transparent;
+  }
+  div[id^="UserMainPage-"] * a > span {
+    color: var(--text-white);
+  }
 
-div[id^="UserMainPage-"] > div > div:nth-child(2) > div:nth-child(1) {
-  background-color: var(--background-dark);
-}
-div[id^="UserMainPage-"] > div > div:nth-child(2) > div:nth-child(2),
-div[id^="UserMainPage-"]
-  > div
-  > div:nth-child(2)
-  > div:nth-child(3)
-  > div:nth-child(2) {
-  background-color: var(--active-selection);
-}
-div[id^="UserMainPage-"] * button[aria-label$="Page"] {
-  background-color: var(--cursor);
-}
+  div[id^="UserMainPage-"] > div > div:nth-child(2) > div:nth-child(1) {
+    background-color: var(--background-dark);
+  }
+  div[id^="UserMainPage-"] > div > div:nth-child(2) > div:nth-child(2),
+  div[id^="UserMainPage-"]
+    > div
+    > div:nth-child(2)
+    > div:nth-child(3)
+    > div:nth-child(2) {
+    background-color: var(--active-selection);
+  }
+  div[id^="UserMainPage-"] * button[aria-label$="Page"] {
+    background-color: var(--cursor);
+  }
 
-.it-MdContent tr:nth-child(odd) {
-  background-color: var(--hairline);
-}
-thead > tr > th {
-  background-color: var(--active-selection);
-}
+  .it-MdContent tr:nth-child(odd) {
+    background-color: var(--hairline);
+  }
+  thead > tr > th {
+    background-color: var(--active-selection);
+  }
 
-.st-NewHeader_subNavigation {
-  background-color: var(--inactive-selection);
+  .st-NewHeader_subNavigation {
+    background-color: var(--inactive-selection);
+  }
 }
-
-/*
-必ずしも暗くなるとは限らないのでやめ
-div[id^="PersonalArticlePage-"] * img {
-  filter: invert(100%);
-}
-*/
