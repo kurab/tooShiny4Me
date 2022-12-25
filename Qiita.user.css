@@ -37,6 +37,7 @@ section {
 .p-items_main > div:first-child,
 .p-items_main > div:nth-child(2) > div,
 .p-items_main * section,
+.p-items_main > div:first-child > div:first-child * span,
 .p-items_main > div > div > div {
   background-color: var(--active-selection);
   color: var(--text-white);
@@ -60,11 +61,30 @@ section {
 .p-items_toc * a:hover {
   background-color: var(--comment);
 }
+blockquote *:not(code) {
+  color: var(--text-white);
+}
 
 .allWrapper > div > header,
 .st-NewHeader_mainNavigation,
 .st-NewHeader_dropdown.is-open {
   background-color: var(--background-dark);
+}
+.st-NewHeader_notiIframe.is-open,
+.st-NewHeader_notiHeaderTitle > span,
+.notification {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+}
+
+a.st-NewHeader_dropdownItem:hover {
+  background-color: var(--cursor);
+}
+div.st-NewHeader_dropdownItem {
+  color: var(--text-white);
+}
+hr.st-NewHeader_dropdownDivider {
+  background-color: var(--hairline);
 }
 
 a,
@@ -189,3 +209,10 @@ thead > tr > th {
 .st-NewHeader_subNavigation {
   background-color: var(--inactive-selection);
 }
+
+/*
+必ずしも暗くなるとは限らないのでやめ
+div[id^="PersonalArticlePage-"] * img {
+  filter: invert(100%);
+}
+*/
